@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laser Arduino Test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+      integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Laser Arduino Test</h1>
+    <button id="lightOn">Turn ON</button>
+    <button id="lightOff">Turn OFF</button>
+
+    <script>
+      let socket = io();
+
+      document.getElementById("lightOn").onclick = function () {
+        socket.emit("lights", { status: "1" });
+      };
+
+      document.getElementById("lightOff").onclick = function () {
+        socket.emit("lights", { status: "0" });
+      };
+    </script>
+  </body>
+</html>
+
+
+<!-- to run, use `node app.js` in terminal and go to localhost:3000 in browser -->
