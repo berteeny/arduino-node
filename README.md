@@ -1,6 +1,6 @@
 # Arduino-Node
 
-This Node.js server is under ongoing development. The server runs locally to maintain communication between a simple web app and an Arduino esp32 device. In it's first iteration, the app allows the user to initiate a blinking led light sequence that runs continuously until stopped by the user.
+This Node.js server is under ongoing development. The server runs locally to maintain communication between a simple web app and an Arduino esp32 device via [socket](https://socket.io/). In it's first iteration, the app allows the user to initiate a blinking led light sequence that runs continuously until stopped by the user.
 
 More to come!
 
